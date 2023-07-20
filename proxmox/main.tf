@@ -21,6 +21,9 @@ resource "proxmox_vm_qemu" "debian-test" {
   memory      = 2048
   cores       = 2
 
+  ciuser  = "ansible"
+  sshkeys = var.ssh_key
+
   disk {
     type    = "scsi"
     storage = "local"
@@ -47,9 +50,6 @@ resource "proxmox_vm_qemu" "vyos" {
   memory      = 2048
   cores       = 2
   agent       = 1
-
-  ssh_user = "ansible"
-  sshkeys  = var.ssh_key
 
   vga {
     type   = "qxl"
