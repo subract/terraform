@@ -1,0 +1,16 @@
+#cloud-config
+users:
+  - name: ansible
+    sudo: ALL=(ALL) NOPASSWD:ALL
+    shell: /bin/bash
+    ssh_authorized_keys:
+      - ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIE2Yj6nW+UXq9WN8LFqBvqXbr7z/10bjBKUen7Zbx8Sj
+package_update: true
+package_upgrade: true
+packages:
+  - vim
+  - kitty-terminfo
+  
+# Example command:
+# runcmd:
+#   - echo hello > /test
