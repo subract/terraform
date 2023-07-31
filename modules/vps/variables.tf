@@ -20,15 +20,15 @@ variable "location" {
   default     = "hil"
 }
 
-variable "firewall_ids" {
-  description = "VPS firewall ID"
-  type        = list(string)
+variable "ssh_key" {
+  description = "Root SSH key name"
+  type        = string
+  default     = "dummy"
 }
 
-
-variable "ip_name" {
-  description = "VPS IP name"
-  type        = string
+variable "labels" {
+  description = "Labels for firewalls"
+  type        = map(string)
 }
 
 variable "ip_datacenter" {
