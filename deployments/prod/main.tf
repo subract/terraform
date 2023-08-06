@@ -24,16 +24,3 @@ module "web1" {
     "fw_web" : ""
   }
 }
-
-module "web2" {
-  source     = "../../modules/vps"
-  depends_on = [module.base]
-
-  name  = "web2"
-  image = "debian-11"
-  type  = "cpx21"
-
-  labels = {
-    "fw_web" : ""
-  }
-}

@@ -4,5 +4,5 @@ This repo stores the Terraform configuration form `subract`'s homelab. I created
 
 It contains two [deployments](deployments):
 
-- **[prod](deployments/prod)**: Contains the production instance of my web servers
+- **[prod](deployments/prod)**: Contains the production instance of my web server
 - **[games](deployments/games)**: Contains a game server that can be run on-demand
