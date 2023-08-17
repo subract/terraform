@@ -18,7 +18,7 @@ module "games1" {
 
   name  = "games1"
   image = "debian-12"
-  type  = "cpx11"
+  type  = "cpx21"
 
   labels = {
     "fw_mc" : ""

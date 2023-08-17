@@ -42,3 +42,9 @@ variable "ip_autodelete" {
   type        = bool
   default     = false
 }
+
+variable "delete_protection" {
+  description = "VPS deletion protection"
+  type        = bool
+  default     = false
+}

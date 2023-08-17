@@ -1,11 +1,13 @@
 # Create a server
 resource "hcloud_server" "vps" {
-  name        = var.name
-  image       = var.image
-  server_type = var.type
-  location    = var.location
-  ssh_keys    = [var.ssh_key]
-  labels      = var.labels
+  name               = var.name
+  image              = var.image
+  server_type        = var.type
+  location           = var.location
+  ssh_keys           = [var.ssh_key]
+  labels             = var.labels
+  delete_protection  = var.delete_protection
+  rebuild_protection = var.delete_protection
 
   # Add cloud-init config
   user_data = file("${path.module}/user-data.yml")

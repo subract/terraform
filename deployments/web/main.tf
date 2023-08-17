@@ -16,9 +16,10 @@ module "web1" {
   source     = "../../modules/vps"
   depends_on = [module.base]
 
-  name  = "web1"
-  image = "debian-11"
-  type  = "cpx21"
+  name              = "web1"
+  image             = "debian-11"
+  type              = "cpx21"
+  delete_protection = true
 
   labels = {
     "fw_web" : ""

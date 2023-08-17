@@ -77,3 +77,18 @@ resource "hcloud_firewall" "minecraft" {
 }
 
 
+resource "hcloud_firewall" "tailscale" {
+  name = "tailscale"
+  apply_to {
+    label_selector = "!all"
+  }
+  rule {
+    direction = "in"
+    protocol  = "udp"
+    port      = "41641"
+    source_ips = [
+      "0.0.0.0/0",
+      "::/0"
+    ]
+  }
+}
